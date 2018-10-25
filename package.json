@@ -1,7 +1,7 @@
 {
   "name": "orange-landing",
   "version": "1.0.0",
-  "description": "an implementation of a basic bootstrap-powered landing page without using bootstrap",
+  "description": "a mobile-first implementation of a basic bootstrap-powered landing page without using bootstrap",
   "main": "index.js",
   "scripts": {
     "test": ""
@@ -10,10 +10,15 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.9.4",
     "webpack": "^4.22.0",
     "webpack-stream": "^5.1.1"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

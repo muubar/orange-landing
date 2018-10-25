@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 const webpack = require('webpack-stream');
 
 function html() {
@@ -9,7 +11,8 @@ function html() {
 };
 
 function assets() {
-  return gulp.src(['src/*.png', 'src/*.jpg', 'src/*.svg'])
+  return gulp.src(['src/assets/*.png', 'src/assets/*.jpg', 'src/assets/*.svg'])
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/assets/'))
 }
 
@@ -17,6 +20,7 @@ function sassy() {
   return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('dist/css/'));
 };
 
