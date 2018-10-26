@@ -5,6 +5,7 @@ $sans-serif: 'Open Sans',sans-serif;
 $serif: 'Merriweather',serif;
 $orange: #f05f40;
 $gray: #212529;
+$light-gray : #6c757d;
 
 .page {
   color: white;
@@ -19,6 +20,14 @@ $gray: #212529;
 
 .page .page__text--normal-weight {
   font-weight: 300;
+}
+
+.page .page__text--light-gray {
+  color: $light-gray;
+}
+
+.page .page__text--no-margin {
+  margin: 0;
 }
 
 .page .page_section--center-text {
@@ -63,6 +72,12 @@ $gray: #212529;
 .page__title {
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
+}
+
+.page__title--smaller {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .page .page__title--extra-margin {
@@ -164,6 +179,12 @@ $gray: #212529;
   margin-bottom: 1rem;
 }
 
+.section__icon--large {
+  width: 70px;
+  height: 70px;
+  margin-top: 3rem;
+}
+
 .section__icon--phone{
   background: center 0px no-repeat url('../assets/phone.svg');
   background-size: cover;
@@ -171,6 +192,34 @@ $gray: #212529;
 
 .section__icon--email{
   background: center 0px no-repeat url('../assets/email.svg');
+  background-size: cover;
+  text-decoration: none;
+  color: $gray;
+}
+
+.section__icon--diamond{
+  background: center 0px no-repeat url('../assets/diamond.svg');
+  background-size: cover;
+  text-decoration: none;
+  color: $gray;
+}
+
+.section__icon--plane {
+  background: center 0px no-repeat url('../assets/plane.svg');
+  background-size: cover;
+  text-decoration: none;
+  color: $gray;
+}
+
+.section__icon--markup {
+  background: center 0px no-repeat url('../assets/markup.svg');
+  background-size: cover;
+  text-decoration: none;
+  color: $gray;
+}
+
+.section__icon--heart {
+  background: center 0px no-repeat url('../assets/heart.svg');
   background-size: cover;
   text-decoration: none;
   color: $gray;
