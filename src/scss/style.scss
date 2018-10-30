@@ -4,6 +4,7 @@
 $sans-serif: 'Open Sans',sans-serif;
 $serif: 'Merriweather',serif;
 $orange: #f05f40;
+$orange-9: #f06040e3;
 $gray: #212529;
 $light-gray : #6c757d;
 
@@ -12,10 +13,18 @@ $light-gray : #6c757d;
   font-family: $sans-serif;
 }
 
+.page .page__container-responsive {
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.9rem;
+}
+
 .page__flex-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .page .page__text--normal-weight {
@@ -62,11 +71,14 @@ $light-gray : #6c757d;
 
 .page__p {
   font-size: 1rem;
-  color: rgba(255,255,255,0.7);
   font-family: $serif;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 0 1rem 0;
+}
+
+.page__p--faded {
+  color: rgba(255,255,255,0.7);
 }
 
 .page__title {
@@ -94,15 +106,19 @@ $light-gray : #6c757d;
   left: 0;
   right: 0;
   padding: 0.5rem 1rem;
+  background-color: white;
+  font-family: $sans-serif;
+  z-index: 2;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $orange;
+}
+
+.nav__flex {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  font-family: $sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $orange;
 }
 
 .nav__logo {
@@ -251,4 +267,85 @@ $light-gray : #6c757d;
 
 .header__hr--extra-margin {
   margin: 1.9rem auto;
+}
+
+.image--responsive {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image__overlay {
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $sans-serif;
+  transition: all 0.25s;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: $orange-9;
+}
+
+.image__overlay-category {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.image__overlay-name {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.page__flex-div--width {
+  line-height: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.service-box {
+  max-width: 400px;
+}
+
+
+@media (min-width: 576px) {
+  .page__flex-container--row {
+    flex-direction: row;
+  }
+
+  .page__flex-div--width {
+    max-width: 50%;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .page .page__container-responsive {
+    max-width: 750px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .page .page__container-responsive {
+    max-width: 970px;
+  }
+  .page__flex-div--width {
+    max-width: 33.33%;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .page .page__container-responsive {
+    max-width: 1170px;
+  }
 }
