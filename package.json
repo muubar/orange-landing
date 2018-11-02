@@ -20,5 +20,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "perfundo": "^4.0.4"
+  }
 }

@@ -1,3 +1,5 @@
+const perfundo = require('perfundo');
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const hamburgerBtn = document.getElementById('hamburgerBtn')
@@ -5,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburgerBtn.addEventListener('click', function () {
     navList.classList.toggle('nav__ul--active');
-  })
 
+    perfundo('.perfundo', {
+      disableHistory: true,
+      swipe: true
+    });
+  })
 })
