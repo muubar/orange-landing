@@ -132,6 +132,7 @@ $light-gray : #6c757d;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.25rem;
+  transition: all 0.3s;
 }
 
 .nav__hamburger {
@@ -389,6 +390,38 @@ $light-gray : #6c757d;
     flex-direction: row;
     margin: 0 auto;
     justify-content: space-around;
+  }
+
+  .nav--no-background {
+    background-color: transparent;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__logo--no-color,  .nav .nav__li--no-color{
+    color: rgba(255,255,255,0.7);
+  }
+
+  .nav__logo--no-color:hover, .nav .nav__li--no-color:hover {
+    color: white;
+    transition: all 0.3s;
+  }
+
+  .nav__ul {
+    background-color: transparent;
+    width: auto;
+    max-height: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  .nav__li {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
   }
 }
 
