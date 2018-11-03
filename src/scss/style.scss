@@ -14,6 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: black;
+  color: white;
+}
+
 .perfundo__link {
   display: inline-block;
   position: relative;
@@ -27,7 +32,8 @@ html {
 .page .page__container-responsive {
   max-width: 540px;
   width: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 0.9rem;
 }
 
@@ -61,18 +67,36 @@ html {
   border-width: 0;
   text-transform: uppercase;
   line-height: 1.5;
-  padding: 1rem 2rem;
   color: white;
   font-style: $sans-serif;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page__button:hover {
+  background-color: darken($color: $orange, $amount: 5%);
+}
+
+.page__button:active, .page__button:focus {
+  box-shadow: 0 0 0 .2rem rgba(240,95,64,.5);
+  outline: 0;
 }
 
 .page__button--white-background {
   background-color: white;
 }
 
-.page .page__text--gray {
+.page__button--white-background:hover {
+  background-color: darken($color: white, $amount: 10%);
+}
+
+.page__button--white-background:active, .page__button--white-background:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248,249,250,.5);
+  outline: 0;
+}
+
+.button__a.page__text--gray, .page__text--gray, .button__a.page__text--gray:visited {
   color: $gray;
 }
 
@@ -179,6 +203,26 @@ html {
 
 .nav__li:active {
   color: $orange;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.button__a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.button__a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.button__a:active {
+  color: white;
 }
 
 .nav__ul--active {
@@ -320,7 +364,6 @@ html {
 .page__flex-div--width {
   line-height: 0;
   max-width: 100%;
-  // position: relative;
 }
 
 .service-box {
@@ -329,6 +372,50 @@ html {
 
 .icon-container {
   width: 250px;
+}
+
+// https://github.com/daneden/animate.css/blob/master/source/bouncing_entrances/bounceIn.css
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 1s;
+  animation-name: bounceIn;
 }
 
 
@@ -427,6 +514,15 @@ html {
   .nav__li {
     padding: 0.5rem 1rem;
     transition: all 0.3s;
+  }
+
+  .header {
+    min-height: 650px;
+    height: 100vh;
+  }
+
+  .section--extra-margin {
+    margin-top: 2.5rem;
   }
 }
 

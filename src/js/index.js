@@ -26,4 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
       Array.from(navLis).map((elem) => elem.classList.add('nav__li--no-color'));
     }
   })
+
+  // https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
+  const hiddenElems = document.querySelectorAll('.hidden');
+  const windowHeight = window.innerHeight;
+
+  window.addEventListener('scroll', function () {
+    for (var i = 0; i < hiddenElems.length; i++) {
+      var positionFromTop = hiddenElems[i].getBoundingClientRect().top;
+      if (positionFromTop - windowHeight <= 0) {
+        hiddenElems[i].className = hiddenElems[i].className.replace(
+          'hidden',
+          'bounceIn'
+        );
+      }
+    }
+  });
+
+
 })
