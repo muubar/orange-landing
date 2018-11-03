@@ -9,6 +9,11 @@ $orange-9: #f06040e3;
 $gray: #212529;
 $light-gray : #6c757d;
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 .perfundo__link {
   display: inline-block;
   position: relative;

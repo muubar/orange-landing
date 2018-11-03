@@ -1,3 +1,5 @@
+import smoothscroll from 'smoothscroll-polyfill';
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -5,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementsByClassName('nav')[0];
   const navLis = document.getElementsByClassName('nav__li');
   const navLogo = document.getElementsByClassName('nav__logo')[0];
+
+  smoothscroll.polyfill();
 
   hamburgerBtn.addEventListener('click', function () {
     navList.classList.toggle('nav__ul--active');

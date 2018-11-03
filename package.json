@@ -22,6 +22,7 @@
     "defaults"
   ],
   "dependencies": {
-    "perfundo": "^4.0.4"
+    "perfundo": "^4.0.4",
+    "smoothscroll-polyfill": "^0.4.3"
   }
 }
