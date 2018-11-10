@@ -10,5 +10,6 @@ https://orange-landing.surge.sh/
 npm install -g gulp-cli
 git clone https://github.com/muubar/orange-landing.git
 npm install
+gulp build
 ```
 you should find a new directory named `dist` in the project's directory.
